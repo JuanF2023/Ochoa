@@ -1,0 +1,192 @@
+/* General layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Gradient Banner Section */
+.gradient-banner {
+    width: 100vw; /* Full width */
+    height: 15vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4CAF50, #FFA500); /* Gradient colors */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.gradient-banner h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight shadow for better readability */
+}
+
+/* Navigation Section Styling */
+.nav-section {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+.phone-order-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.phone-order-button:hover {
+    background-color: #0056b3;
+}
+
+/* Note Section Styling */
+.note-section {
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #f9f9f9; /* Light background to distinguish the note */
+    border: 1px solid #ddd;
+}
+
+.note-section p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Margin between banner and content */
+#food-section h1 {
+    margin-top: 20px; /* Add spacing between the banner and the "Our Menu" section */
+    text-align: center;
+}
+
+/* Food Grid Layout */
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile-first */
+    gap: 20px; /* Space between grid items */
+    padding: 0 20px; /* Padding to avoid touching the edges */
+}
+
+.food-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Ensuring all images have the same size */
+.food-item img {
+    width: 100%;
+    height: 200px; /* Fixed height to ensure uniformity */
+    object-fit: cover; /* Cover the container maintaining aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.food-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.food-item .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.food-item .price {
+    font-size: 1.2rem;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Watch Video Button Styling */
+.watch-video-button, .order-now-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 20px; /* Ensure the buttons have the same height */
+}
+
+.watch-video-button {
+    background-color: #FFA500;
+    color: white;
+}
+
+.watch-video-button:hover {
+    background-color: #cc8400;
+}
+
+.order-now-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.order-now-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .food-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .food-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns for desktops */
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+#footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#footer-links li {
+    margin: 0 10px;
+}
+
+#footer-links a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#footer-links a:hover {
+    text-decoration: underline;
+}
