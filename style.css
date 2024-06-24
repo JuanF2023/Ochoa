@@ -19,6 +19,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 .gradient-banner h1 {
@@ -26,6 +27,41 @@ body {
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight shadow for better readability */
+}
+
+.banner-logo-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+}
+
+.banner-logo {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+    .gradient-banner {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .banner-logo-container {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .gradient-banner h1 {
+        font-size: 2rem;
+    }
 }
 
 /* Navigation Section Styling */
@@ -189,4 +225,11 @@ footer {
 
 #footer-links a:hover {
     text-decoration: underline;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
