@@ -16,7 +16,6 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #4CAF50, #FFA500); /* Gradient colors */
     color: white;
-    text-align: center;
     padding: 20px;
     position: relative;
 }
@@ -24,21 +23,18 @@ body {
 .banner-content {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
 }
 
 .gradient-banner h1 {
-    margin: 0 0 0 20px;
+    margin: 0 auto;
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight shadow for better readability */
 }
 
 .banner-logo-container {
-    overflow: hidden;
-    width: auto;
-    height: 100%;
+    margin-right: auto;
 }
 
 .banner-logo {
@@ -57,12 +53,12 @@ body {
     .banner-content {
         flex-direction: row;
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .gradient-banner h1 {
         font-size: 2rem;
-        margin: 0 0 0 10px;
+        margin-left: 10px;
     }
 
     .banner-logo {
