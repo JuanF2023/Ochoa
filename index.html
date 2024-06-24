@@ -28,7 +28,7 @@
         <div class="food-grid">
             <!-- Food items with updated image links and descriptions -->
             <div class="food-item">
-                <img src="Birthday Crepe.jpg" alt="Birthday Crepe">
+                <img src="Birthday Crepe.jpg" alt="Birthday Crepe" class="clickable-image">
                 <h2>Birthday Crepe</h2>
                 <p class="description">A festive crepe decorated with colorful sprinkles, whipped cream, and fresh strawberries, perfect for celebrating special occasions.</p>
                 <p class="price">$12.99</p>
@@ -36,7 +36,7 @@
                 <button class="order-now-button" onclick="window.location.href='tel:3232169470'">Order Now</button>
             </div>
             <div class="food-item">
-                <img src="Classic Crepe.jpg" alt="Classic Crepe">
+                <img src="Classic Crepe.jpg" alt="Classic Crepe" class="clickable-image">
                 <h2>Classic Crepe</h2>
                 <p class="description">A traditional crepe with a rich chocolate drizzle and a sprinkle of powdered sugar, topped with fresh strawberries.</p>
                 <p class="price">$10.99</p>
@@ -44,7 +44,7 @@
                 <button class="order-now-button" onclick="window.location.href='tel:3232169470'">Order Now</button>
             </div>
             <div class="food-item">
-                <img src="Fruit Island.jpg" alt="Fruit Island Crepe">
+                <img src="Fruit Island.jpg" alt="Fruit Island Crepe" class="clickable-image">
                 <h2>Fruit Island Crepe</h2>
                 <p class="description">A vibrant crepe filled with a variety of fresh fruits including mango, kiwi, and berries, topped with a drizzle of honey.</p>
                 <p class="price">$11.50</p>
@@ -52,7 +52,7 @@
                 <button class="order-now-button" onclick="window.location.href='tel:3232169470'">Order Now</button>
             </div>
             <div class="food-item">
-                <img src="Happy Kids.jpg" alt="Happy Kids Crepe">
+                <img src="Happy Kids.jpg" alt="Happy Kids Crepe" class="clickable-image">
                 <h2>Happy Kids Crepe</h2>
                 <p class="description">A delightful crepe filled with banana slices, chocolate sauce, and a playful arrangement of strawberries, sure to bring a smile to any child.</p>
                 <p class="price">$10.99</p>
@@ -60,7 +60,7 @@
                 <button class="order-now-button" onclick="window.location.href='tel:3232169470'">Order Now</button>
             </div>
             <div class="food-item">
-                <img src="La Buena Crepe.jpg" alt="La Buena Crepe">
+                <img src="La Buena Crepe.jpg" alt="La Buena Crepe" class="clickable-image">
                 <h2>La Buena Crepe</h2>
                 <p class="description">A delicious crepe featuring fresh strawberries, whipped cream, and a drizzle of chocolate sauce.</p>
                 <p class="price">$11.99</p>
@@ -68,7 +68,7 @@
                 <button class="order-now-button" onclick="window.location.href='tel:3232169470'">Order Now</button>
             </div>
             <div class="food-item">
-                <img src="Oreo Crepe.jpg" alt="Oreo Crepe">
+                <img src="Oreo Crepe.jpg" alt="Oreo Crepe" class="clickable-image">
                 <h2>Oreo Crepe</h2>
                 <p class="description">A decadent crepe filled with crushed Oreos and topped with whipped cream and chocolate sauce.</p>
                 <p class="price">$12.50</p>
@@ -76,7 +76,7 @@
                 <button class="order-now-button" onclick="window.location.href='tel:3232169470'">Order Now</button>
             </div>
             <div class="food-item">
-                <img src="Purple Rain Crepe.jpg" alt="Purple Rain Crepe">
+                <img src="Purple Rain Crepe.jpg" alt="Purple Rain Crepe" class="clickable-image">
                 <h2>Purple Rain Crepe</h2>
                 <p class="description">A unique crepe topped with blueberry syrup and fresh blueberries, offering a burst of flavor with every bite.</p>
                 <p class="price">$13.50</p>
@@ -84,7 +84,7 @@
                 <button class="order-now-button" onclick="window.location.href='tel:3232169470'">Order Now</button>
             </div>
             <div class="food-item">
-                <img src="Sunset Crepe.jpg" alt="Sunset Crepe">
+                <img src="Sunset Crepe.jpg" alt="Sunset Crepe" class="clickable-image">
                 <h2>Sunset Crepe</h2>
                 <p class="description">A warm crepe filled with peaches and a crunchy granola topping, drizzled with caramel sauce.</p>
                 <p class="price">$14.25</p>
@@ -105,5 +105,35 @@
         </ul>
         <span class="copyright">© 2024, JuanFlores </span>
     </footer>
+
+    <!-- Modal for larger image display -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("imageModal");
+
+        // Get the image and insert it inside the modal
+        var modalImg = document.getElementById("modalImage");
+        var images = document.getElementsByClassName("clickable-image");
+        
+        for (let i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
