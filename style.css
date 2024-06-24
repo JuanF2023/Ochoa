@@ -11,59 +11,42 @@ body {
 /* Gradient Banner Section */
 .gradient-banner {
     width: 100vw; /* Full width */
-    height: 15vh; /* Adjust height as needed */
+    height: 23vh; /* Adjust height as needed */
     display: flex;
+    justify-content: flex-start; /* Align items to the start */
     align-items: center;
     background: linear-gradient(135deg, #4CAF50, #FFA500); /* Gradient colors */
     color: white;
     padding: 20px;
-    position: relative;
-}
-
-.banner-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.gradient-banner h1 {
-    margin: 0 auto;
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight shadow for better readability */
 }
 
 .banner-logo-container {
-    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .banner-logo {
     height: 100%;
-    width: auto;
+    max-height: 100px; /* Ensure logo is not too large */
     object-fit: cover;
 }
 
-/* Responsive Banner */
+.gradient-banner h1 {
+    margin: 0;
+    font-size: 6rem; /* Font size for larger screens */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight shadow for better readability */
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .gradient-banner {
-        height: auto;
-        padding: 10px;
-    }
-
-    .banner-content {
-        flex-direction: row;
-        width: 100%;
-        justify-content: flex-start;
-    }
-
     .gradient-banner h1 {
-        font-size: 2rem;
-        margin-left: 10px;
+        font-size: 3rem; /* Font size for smaller screens */
     }
 
     .banner-logo {
-        height: 60px;
-        width: auto;
+        max-height: 60px; /* Ensure logo is not too large */
     }
 }
 
