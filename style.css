@@ -59,6 +59,11 @@ body {
         margin-bottom: 10px;
     }
 
+    .banner-logo {
+        height: auto;
+        width: 50%; /* Adjust width for smaller screens */
+    }
+
     .gradient-banner h1 {
         font-size: 2rem;
     }
