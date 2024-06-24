@@ -11,7 +11,7 @@ body {
 /* Gradient Banner Section */
 .gradient-banner {
     width: 100vw; /* Full width */
-    height: 26vh; /* Adjust height as needed */
+    height: 24vh; /* Adjust height as needed */
     display: flex;
     justify-content: flex-start; /* Align items to the start */
     align-items: center;
